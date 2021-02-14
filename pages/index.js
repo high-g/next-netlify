@@ -30,8 +30,6 @@ export const getStaticProps = async () => {
     headers: { 'X-API-KEY': process.env.API_KEY },
   }
 
-  console.log('key', key)
-
   const res = await fetch(`https://nextjs-jamstack.microcms.io/api/v1/blogs`, key)
   const data = await res.json()
 
